@@ -4,6 +4,7 @@ import { fetchMailData, deleteMailData } from "src/lib/function";
 export interface RESULT {
   id: string;
   count: string;
+  url: string;
   player1: string;
   player2: string;
   player3: string;
@@ -40,6 +41,7 @@ export const TableMail = () => {
           <th>No</th>
           <th>作成日</th>
           <th>count</th>
+          <th>url</th>
           <th>Player1</th>
           <th>Player2</th>
           <th>Player3</th>
@@ -66,6 +68,7 @@ export const TableMail = () => {
               <td className="text-center">{index + 1}</td>
               <td>{mail.createAt}</td>
               <td>{mail.count}</td>
+              <td>{mail.url}</td>
               <td>{mail.player1}</td>
               <td>{mail.player2}</td>
               <td>{mail.player3}</td>

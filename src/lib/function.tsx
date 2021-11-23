@@ -9,6 +9,7 @@ export const fetchMailData = async () => {
     return {
       id: doc.id,
       count: doc.data().count,
+      url: doc.data().url,
       player1: doc.data().player1,
       player2: doc.data().player2,
       player3: doc.data().player3,
