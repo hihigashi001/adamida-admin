@@ -3,7 +3,7 @@ import { fetchMailData, deleteMailData } from "src/lib/function";
 
 export interface RESULT {
   id: string;
-  count: string;
+  title: string;
   url: string;
   player1: string;
   player2: string;
@@ -14,6 +14,15 @@ export interface RESULT {
   player7: string;
   player8: string;
   player9: string;
+  pried1: string;
+  pried2: string;
+  pried3: string;
+  pried4: string;
+  pried5: string;
+  pried6: string;
+  pried7: string;
+  pried8: string;
+  pried9: string;
   createAt: string;
 }
 
@@ -40,7 +49,7 @@ export const TableMail = () => {
           <th></th>
           <th>No</th>
           <th>作成日</th>
-          <th>count</th>
+          <th>title</th>
           <th>url</th>
           <th>Player1</th>
           <th>Player2</th>
@@ -51,6 +60,15 @@ export const TableMail = () => {
           <th>Player7</th>
           <th>Player8</th>
           <th>Player9</th>
+          <th>pried1</th>
+          <th>pried2</th>
+          <th>pried3</th>
+          <th>pried4</th>
+          <th>pried5</th>
+          <th>pried6</th>
+          <th>pried7</th>
+          <th>pried8</th>
+          <th>pried9</th>
         </tr>
       </thead>
       <tbody>
@@ -67,8 +85,8 @@ export const TableMail = () => {
               </td>
               <td className="text-center">{index + 1}</td>
               <td>{mail.createAt}</td>
-              <td>{mail.count}</td>
-              <td>{mail.url}</td>
+              <td>{mail.title}</td>
+              <td>/user/{mail.url}</td>
               <td>{mail.player1}</td>
               <td>{mail.player2}</td>
               <td>{mail.player3}</td>
@@ -78,6 +96,15 @@ export const TableMail = () => {
               <td>{mail.player7}</td>
               <td>{mail.player8}</td>
               <td>{mail.player9}</td>
+              <td>{mail.pried1}</td>
+              <td>{mail.pried2}</td>
+              <td>{mail.pried3}</td>
+              <td>{mail.pried4}</td>
+              <td>{mail.pried5}</td>
+              <td>{mail.pried6}</td>
+              <td>{mail.pried7}</td>
+              <td>{mail.pried8}</td>
+              <td>{mail.pried9}</td>
             </tr>
           );
         })}
